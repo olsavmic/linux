@@ -1,4 +1,4 @@
-#
+#!/usr/bin/python
 # gdb helper commands and functions for Linux kernel debugging
 #
 #  loader module
@@ -12,6 +12,7 @@
 #
 
 import os
+import sys
 
 sys.path.insert(0, os.path.dirname(__file__) + "/scripts/gdb")
 
