@@ -197,7 +197,16 @@ proc_list_cleanup:
 
 static void list_exit(void)
 {
+    struct list_head *i, *tmp;
+    struct data_entry *entry;
+
 	proc_remove(proc_list);
+
+    list_for_each_safe(i, tmp, &proc_data_list) {
+        entry = list_entry(i, struct data_entry, list);
+        list_del(i);
+        kfree(entry);
+    }
 }
 
 module_init(list_init);
