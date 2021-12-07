@@ -47,4 +47,4 @@ obj-m += ./filesystems/myfs/
 #obj-m += ./assignments/0-list/
 #obj-m += ./networking/5-udp-sock/
 #obj-m += ./networking/3-4-tcp-sock/
-#obj-m += ./networking/1-2-netfilter/kernel/
+obj-m += ./networking/1-2-netfilter/kernel/
